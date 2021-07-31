@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Natalia Quirino | Floricultura</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- FAVICON -->
+    <link rel="shortcut icon" href="img/logo-icon.ico" type="image/x-icon">
+    <!-- FONTES -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500&display=swap" rel="stylesheet">
+    <!-- ÍCONES -->
+    <script defer src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" integrity="sha384-haqrlim99xjfMxRP6EWtafs0sB1WKcMdynwZleuUSwJR0mDeRYbhtY+KPMr+JL6f" crossorigin="anonymous"></script>
+    
+
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="img/logo-nav.png" alt="Natalia Quirino Floricultura">
+        </div>
+        <ul class="menu">
+            <li><a href="#products" class="menu-1">Arranjos</a></li>
+            <li><a href="#about" class="menu-2">Sobre</a></li>
+            <li><a href="#contact" class="menu-3">Contato</a></li>
+        </ul>
+    </header>
+    <main>
+        <section class="container">
+            <div class="logotipo">
+                <img src="img/logo-body.png" alt="">
+            </div>
+        </section>
+        <h2 class="arranjos">Arranjos</h2>
+        <section id="products" class="products">
+            <div class="product-item">
+                <img src="img/flor-1.jpg" alt="">
+            </div>
+            <div class="product-item">
+                <img src="img/flor-2.jpg" alt="">
+            </div>
+            <div class="product-item">
+                <img src="img/flor-3.jpg" alt="">
+            </div>
+            <div class="product-item">
+                <img src="img/flor-4.jpg" alt="">
+            </div>
+            <div class="product-item">
+                <img src="img/flor-5.jpg" alt="">
+            </div>
+            <div class="product-item">
+                <img src="img/flor-6.jpg" alt="">
+            </div>
+        </section>
+        <h2>Sobre</h2>
+        <section id="about" class="about">
+            <div class="about-item">
+                <h3>Natalia Quirino de Oliveira</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus rem, ex molestias expedita eius
+                    aliquam excepturi quisquam accusantium consequatur! Earum asperiores rerum corrupti, ad iure nisi
+                    praesentium molestiae adipisci porro!</p>
+                <ul class="social">
+                    <li><a href="#"><i class="fab fa-facebook icons-modify"></i></a></li>
+                    <li><a href="#"><i class="fab fa-instagram icons-modify"></i></a></li>
+                    <li><a href="#"><i class="fab fa-pinterest icons-modify"></i></a></li>
+                </ul>
+            </div>
+            <div class="about-item">
+                <img src="img/about.jpeg" alt="Natalia Quirino de Oliveira">
+            </div>
+        </section>
+        <h2>Faça sua encomenda!</h2>
+        <section class="contact" id="contact">
+            <div class="contact-item">
+                <p><a href="https://api.whatsapp.com/send?phone=5511981787772&text=Olá, Natalia! Gostaria de conferir algumas opções de arranjos" target="_blank"><i class="fab fa-whatsapp icons-modify"></i></a>Fale com um de nossos atendentes</p>
+                <p>Ou</p>
+                <p><a href="#"><abbr title="nataliaquirino45@gmail.com"><i class="fas fa-envelope icons-modify"></i></abbr></a>Encaminhe um email</p>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>Desenvolvido por Geek Coffee &copy;</p>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.0/gsap.min.js" integrity="sha512-2fk3Q4NXPYAqIha0glLZ2nluueK43aNoxvijPf53+DgL7UW9mkN+uXc1aEmnZdkkZVvtJZltpRt+JqTWc3TS3Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.0/ScrollTrigger.min.js" integrity="sha512-jNJOCd1PIjJoUa1XTDKaPdBLNUe4OJTrltKG+70O5ghYZ943nTRGIzjObwC2JtSm1fG7T06GbUApR2eirIU/jA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", ()=>{
+            var tl = gsap.timeline();
+
+            tl
+            .from(".logo",{
+                duration: 1,
+                y: 50,
+                opacity: 0,
+                delay: 0.5,
+                ease: "power3.out"
+            })
+            .from(".menu-1",{
+                duration: 1,
+                y: 50,
+                opacity: 0,
+                ease: "power3.out"
+            },"-=0.8")
+            .from(".menu-2",{
+                duration: 1,
+                y: 50,
+                opacity: 0,
+                ease: "power3.out"
+            },"-=0.8")
+            .from(".menu-3",{
+                duration: 1,
+                y: 50,
+                opacity: 0,
+                ease: "power3.out"
+            },"-=0.8")
+            .from(".logotipo",{
+                duration: 1,
+                y: 50,
+                opacity: 0,
+                ease: "power3.out"
+            },"-=0.8")
+
+            gsap.registerPlugin(ScrollTrigger);
+            
+            gsap.from("#products div",{
+                duration: 1,
+                y: 300,
+                opacity: 0,
+                stagger: {each: 0.2},
+                ease: "power3.out",
+                scrollTrigger: {
+                    trigger: "#products",
+                }
+            });
+            gsap.from("#about div",{
+                duration: 1,
+                y: 300,
+                opacity: 0,
+                stagger: {each: 0.2},
+                ease: "power3.out",
+                scrollTrigger: {
+                    trigger: "#about",
+                }
+            });
+            gsap.from("#contact div",{
+                duration: 1,
+                y: 300,
+                opacity: 0,
+                stagger: {each: 0.2},
+                ease: "power3.out",
+                scrollTrigger: {
+                    trigger: "#contact",
+                }
+            });
+        })
+    </script>
+</body>
+
+</html>
